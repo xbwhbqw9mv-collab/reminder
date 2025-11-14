@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // Data setup for the cards and list
+    
     let summaryLists: [ReminderList] = [
         .init(name: "Today", count: 0, icon: "10.calendar", color: .blue, isCompleted: false),
         .init(name: "Scheduled", count: 0, icon: "calendar", color: .red, isCompleted: false),
@@ -36,6 +37,7 @@ struct ContentView: View {
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.clear)
                     
+                    
                     // MARK: - Sync Alert
                     SyncAlertView()
                         .listRowSeparator(.hidden)
@@ -49,7 +51,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                .navigationTitle("14:39") // Use a generic title or remove if needed
+               
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
